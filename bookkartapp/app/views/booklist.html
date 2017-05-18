@@ -1,0 +1,33 @@
+<div class="row">
+	<div class="col-md-12">
+	<label>search book</label>
+		<input type="text" name="search" ng-model="">
+	</div>
+</div>
+<div class="col-md-12  " ng-controller="bookcontroller">
+
+<div class="row border" ng-repeat="books in book track by $index">
+		<div class="col-md-4">
+		<img src="images/{{books.imageurl}}">
+	</div>
+	<div class="col-md-8">
+		<div class="row">
+			<div class="col-md-12">
+			<div class="col-4">
+			<h3>Name:{{books.name}}</h3>
+				<h4>Price:{{books.price | currency:'Rs.'}}</h4>
+			</div>
+			<div class="col-md-8">
+				<div class="row">
+					<p>{{books.description}}</p>
+					<p>Author:{{books.author}}</p>
+				</div>
+				<div class="row">
+					<button type="button" class="btn btn-primary" ng-click="addtokart(books)" >add to kart</button>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+</div>

@@ -1,0 +1,28 @@
+
+<div class="col-md-12  " ng-controller="kartcontroller">
+
+<div class="row border" ng-repeat="books in kart">
+		<div class="col-md-4">
+		<img src="images/{{books.imageurl}}">
+	</div>
+	<div class="col-md-8">
+		<div class="row">
+			<div class="col-md-12">
+			<div class="col-4">
+			<h3>Name:{{books.name}}</h3>
+				<h4>Price:{{books.price | currency:'Rs.'}}</h4>
+			</div>
+			<div class="col-md-8">
+				<div class="row">
+					<p>{{books.description}}</p>
+					<p>Author:{{books.author}}</p>
+				</div>
+				<div class="row">
+					<button type="button" class="btn btn-primary" ng-click="buy(books)" >Buy it now</button>
+				</div>
+			</div>
+		</div>
+		</div>
+	</div>
+</div>
+</div>

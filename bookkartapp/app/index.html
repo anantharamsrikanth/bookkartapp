@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html ng-app="myapp">
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="styles/main.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.6/angular.min.js"></script>
+    <script src="https://unpkg.com/angular-ui-router@0.3.1/release/angular-ui-router.js"></script>
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/headercontroller.js"></script>
+     <script src="scripts/controllers/bookcontroller.js"></script>
+    <script src="scripts/controllers/kartcontroller.js"></script>
+     <script src="scripts/services/bookservice.js"></script>
+     <script src="scripts/services/kartservice.js"></script>
+   
+</head>
+
+<body>
+
+    <div class="section" ng-controller="headercontroller">
+        <div class="col-md-12">
+            <div class="col-md-6">
+                <h1>{{headerdetails.title}}</h1>
+            </div>
+            <div class="col-md-6">
+                <h3>{{headerdetails.sidetext}}</h3>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-12">
+        <a ui-sref="booklist">
+            <button type="button" class="btn btn-success">BOOK VIEW</button>
+        </a>
+        <a ui-sref="kartlist">
+            <button type="button" class="btn btn-warning">KART VIEW</button>
+        </a>
+    </div>
+    <div class="container">
+        <ui-view></ui-view>
+    </div>
+</body>
+
+</html>

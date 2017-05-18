@@ -1,0 +1,8 @@
+.border{
+	border:1px solid;
+	margin-top: 20px;
+}
+.border img{
+	height: 180px;
+	width: 200px;
+}
